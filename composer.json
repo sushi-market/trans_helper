@@ -3,7 +3,8 @@
     "require": {
         "laravel/framework": "^8.0|^9.0|^10.0"
     },
-    "version": "v1.0",
+    "version": "1.0",
+    "type": "laravel-package",
     "authors": [
         {
             "name": "wwtork",
@@ -15,5 +16,6 @@
             "trans_helper.php"
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
