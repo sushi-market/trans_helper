@@ -13,5 +13,6 @@
         "files": [
             "trans_helper.php"
         ]
-    }
+    },
+    "minimum-stability": "stable"
 }
