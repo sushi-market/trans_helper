@@ -1,0 +1,17 @@
+{
+    "name": "sushi-market/trans_helper",
+    "require": {
+        "laravel/laravel": "~10.0"
+    },
+    "authors": [
+        {
+            "name": "wwtork",
+            "email": "wwtork@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "trans_helper.php"
+        ]
+    }
+}
