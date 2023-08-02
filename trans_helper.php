@@ -64,6 +64,7 @@ if (!function_exists('___')) {
             $shouldReplace['{'.$key.'}'] = $value;
         }
 
+
         return strtr($translate, $shouldReplace);
     }
 
