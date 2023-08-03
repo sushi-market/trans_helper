@@ -135,4 +135,9 @@ class TranslatorTest extends TestCase
         /** @noinspection PhpRedundantOptionalArgumentInspection */
         $this->assertEquals('', ___(null));
     }
+
+    public function test_translation_empty_key(): void
+    {
+        $this->assertEquals('', ___(''));
+    }
 }
