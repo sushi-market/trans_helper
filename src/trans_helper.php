@@ -53,7 +53,7 @@ if (!function_exists('___')) {
         return ___r($translate, $replace);
     }
 
-    function ___r($string, $replace): string
+    function ___r(string $string, array $replace = []): string
     {
         $shouldReplace = [];
         foreach ($replace as $key => $value) {
