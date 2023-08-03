@@ -3,7 +3,6 @@
     "some_simple.key_with_dot": "some simple value for key with dot",
     "some_simple.key_with_dot_variable1": "some simple :variable for key with dot",
     "some_simple.key_with_dot_variable2": "some simple {variable} for key with dot",
-    ".": ",",
     "some": {
         "complex": {
             "key": "some complex value"
