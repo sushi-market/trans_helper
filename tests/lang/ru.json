@@ -1,6 +1,8 @@
 {
     "some_simple_key": "какое-то простое значение",
     "some_simple.key_with_dot": "какое-то простое значение для ключа с точкой",
+    "some_simple.key_with_dot_variable1": "какое-то простое :variable для ключа с точкой",
+    "some_simple.key_with_dot_variable2": "какое-то простое {variable} для ключа с точкой",
     "some": {
         "complex": {
             "key": "какое-то комплексное значение"

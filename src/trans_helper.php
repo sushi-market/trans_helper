@@ -11,6 +11,12 @@ if (!function_exists('___')) {
             return '';
         }
 
+        $translate = trans($key, [], $locale);
+
+        if (!empty($translate) && ($translate != $key)) {
+            return ___r($translate, $replace);
+        }
+
         $key_list = explode('.', $key);
 
         if (!is_array($key_list) || !count($key_list)) {
@@ -46,6 +52,11 @@ if (!function_exists('___')) {
             return $key;
         }
 
+        return ___r($translate, $replace);
+    }
+
+    function ___r($string, $replace): string
+    {
         $shouldReplace = [];
         foreach ($replace as $key => $value) {
             // Для локализаций переменных вида ":variable"
@@ -59,6 +70,6 @@ if (!function_exists('___')) {
             $shouldReplace['{' . $key . '}'] = $value;
         }
 
-        return strtr($translate, $shouldReplace);
+        return strtr($string, $shouldReplace);
     }
 }

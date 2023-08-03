@@ -22,6 +22,16 @@ class TranslatorTest extends TestCase
         $this->assertEquals('some simple value for key with dot', ___('some_simple.key_with_dot'));
     }
 
+    public function test_translation_simple_with_dot_and_variable1(): void
+    {
+        $this->assertEquals('some simple Argh for key with dot', ___('some_simple.key_with_dot_variable1', ['variable' => 'Argh']));
+    }
+
+    public function test_translation_simple_with_dot_and_variable2(): void
+    {
+        $this->assertEquals('some simple Argh for key with dot', ___('some_simple.key_with_dot_variable2', ['variable' => 'Argh']));
+    }
+
     public function test_translation_simple_with_locale_ru(): void
     {
         $this->assertEquals('какое-то простое значение', ___('some_simple_key', locale: 'ru'));
