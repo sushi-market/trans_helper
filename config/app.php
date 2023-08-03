@@ -82,15 +82,17 @@ return [
     |
     */
     'flags' => [
-        'en' => 'us'
+        'en' => 'us',
+        'ru' => 'ru'
     ],
 
     'locale_names' => [
-        'en' => 'English'
+        'en' => 'English',
+        'ru' => 'Russian'
     ],
 
     'available_locales' => [
-        'en'
+        'en', 'ru'
     ],
 
     'locale' => 'en',

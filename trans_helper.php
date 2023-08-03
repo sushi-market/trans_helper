@@ -30,7 +30,7 @@ if (!function_exists('___')) {
         $first_key = $key_list[0];
         array_shift($key_list);
 
-        $translate = app('translator')->get($first_key);
+        $translate = app('translator')->get($first_key, [], $locale);
 
         if (empty($translate) || $translate == $first_key)
             return $key;
