@@ -10,8 +10,8 @@ class TranslationTest extends TestCase
     const COMPLEX_KEY = 'some.complex.key';
     const COMPLEX_KEY_PART = 'some.complex';
 
-    const SIMPLE_VALUE  = "some simple value";
-    const COMPLEX_VALUE = "some complex value";
+    const SIMPLE_VALUE  = 'some simple value';
+    const COMPLEX_VALUE = 'some complex value';
 
     const VARIABLE_KEYS   = [
         'some.variable1.key',
@@ -27,13 +27,17 @@ class TranslationTest extends TestCase
 
     public function __construct(string $name)
     {
-
         parent::__construct($name);
     }
 
-    public function test_translation_simple(): void
+    public function test_translation_simple_with_locale_default(): void
     {
         $this->assertEquals(self::SIMPLE_VALUE, ___(self::SIMPLE_KEY));
+    }
+
+    public function test_translation_simple_with_locale_ru(): void
+    {
+        $this->assertEquals('какое-то простое значение', ___('some_simple_key', locale: 'ru'));
     }
 
     public function test_translation_simple_not_found(): void
@@ -41,9 +45,14 @@ class TranslationTest extends TestCase
         $this->assertEquals(self::SIMPLE_KEY . '1', ___(self::SIMPLE_KEY . '1'));
     }
 
-    public function test_translation_complex(): void
+    public function test_translation_complex_with_locale_default(): void
     {
         $this->assertEquals(self::COMPLEX_VALUE, ___(self::COMPLEX_KEY));
+    }
+
+    public function test_translation_complex_with_locale_ru(): void
+    {
+        $this->assertEquals('какое-то комплексное значение', ___('some.complex.key', locale: 'ru'));
     }
 
     public function test_translation_complex_not_found(): void
@@ -54,6 +63,28 @@ class TranslationTest extends TestCase
     public function test_translation_complex_part_object_found(): void
     {
         $this->assertEquals(self::COMPLEX_KEY_PART, ___(self::COMPLEX_KEY_PART));
+    }
+
+    public function test_translation_variables_capital_first_letter(): void
+    {
+        $this->assertEquals('some Test value', ___('some.variable1.key_capital_first_letter', [
+            'variable' => 'test'
+        ]));
+
+        $this->assertEquals('some Test value', ___('some.variable2.key_capital_first_letter', [
+            'variable' => 'test'
+        ]));
+    }
+
+    public function test_translation_variables_capital_all_letters(): void
+    {
+        $this->assertEquals('some TEST value', ___('some.variable1.key_capital_all_letters', [
+            'variable' => 'test'
+        ]));
+
+        $this->assertEquals('some TEST value', ___('some.variable2.key_capital_all_letters', [
+            'variable' => 'test'
+        ]));
     }
 
     public function test_translation_variables(): void

@@ -1,0 +1,20 @@
+{
+    "some_simple_key": "какое-то простое значение",
+    "some": {
+        "complex": {
+            "key": "какое-то комплексное значение"
+        },
+        "variable1": {
+            "key": "какое-то :variable значение"
+        },
+        "variable1_capital_first_letter": {
+            "key": "какое-то :Variable значение"
+        },
+        "variable1_capital_all_letters": {
+            "key": "какое-то :VARIABLE значение"
+        },
+        "variable2": {
+            "key": "какое-то {variable} значение"
+        }
+    }
+}

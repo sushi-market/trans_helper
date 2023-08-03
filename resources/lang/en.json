@@ -5,10 +5,14 @@
             "key": "some complex value"
         },
         "variable1": {
-            "key": "some :variable value"
+            "key": "some :variable value",
+            "key_capital_first_letter": "some :Variable value",
+            "key_capital_all_letters": "some :VARIABLE value"
         },
         "variable2": {
-            "key": "some {variable} value"
+            "key": "some {variable} value",
+            "key_capital_first_letter": "some {Variable} value",
+            "key_capital_all_letters": "some {VARIABLE} value"
         }
     }
 }
