@@ -10,17 +10,17 @@ if (!function_exists('___')) {
      * @description Extract a key from localization in json object file delimiter "."
      *
      * @param string|null $key
-     * @param array       $replace
+     * @param array $replace
      * @param string|null $locale
      *
-     * @return null|string
+     * @return string
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
-    function ___(?string $key = null, array $replace = [], string $locale = null) : ?string
+    function ___(?string $key = null, array $replace = [], string $locale = null) : string
     {
         if (is_null($key))
-            return null;
+            return '';
 
         $key_list = explode('.', $key);
 
@@ -48,7 +48,7 @@ if (!function_exists('___')) {
         }
 
         if(!is_string($translate))
-            return null;
+            return $key;
 
         $shouldReplace = [];
 

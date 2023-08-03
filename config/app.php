@@ -15,18 +15,6 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'auth_api_token_sale_production' => env('AUTH_API_TOKEN_SALE_PRODUCTION', ''),
-
-    'office_token' => env('OFFICE_TOKEN', ''),
-
-    'courier_auth_service' => env('COURIER_AUTH_SERVICE', ''),
-
-    'iiko_integration_auth' => env('IIKO_INTEGRATION_AUTH', ''),
-
-    'app_tracking_url' => env('APP_TRACKING_URL', ''),
-
-	'login_theme' => 'skin-spring-',
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment
