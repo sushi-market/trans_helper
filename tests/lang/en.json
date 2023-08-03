@@ -1,7 +1,6 @@
 {
     "some_simple_key": "some simple value",
     "some_simple.key_with_dot": "some simple value for key with dot",
-    ".": ",",
     "some": {
         "complex": {
             "key": "some complex value"
