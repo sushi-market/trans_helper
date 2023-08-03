@@ -19,9 +19,8 @@ if (!function_exists('___')) {
 
         $key_list = explode('.', $key);
 
-        if (!is_array($key_list) || !count($key_list)) {
-            return trans($key, $replace, $locale);
-        }
+        if (!is_array($key_list) || !count($key_list))
+            return $key;
 
         $first_key = $key_list[0];
         array_shift($key_list);
@@ -29,9 +28,8 @@ if (!function_exists('___')) {
         /** @noinspection PhpUnhandledExceptionInspection */
         $translate = app('translator')->get($first_key, [], $locale);
 
-        if (empty($translate) || $translate == $first_key) {
+        if (empty($translate) || $translate == $first_key)
             return $key;
-        }
 
         if (is_array($translate)) {
             foreach ($key_list as $key_each) {
