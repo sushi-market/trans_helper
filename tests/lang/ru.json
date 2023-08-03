@@ -1,0 +1,23 @@
+{
+    "some_simple_key": "какое-то простое значение",
+    "some_simple.key_with_dot": "какое-то простое значение для ключа с точкой",
+    "some": {
+        "complex": {
+            "key": "какое-то комплексное значение"
+        },
+        "variable1": {
+            "key": "какое-то :variable значение",
+            "key_capital_first_letter": "какое-то :Variable значение",
+            "key_capital_all_letters": "какое-то :VARIABLE значение",
+            "key_twice": "какое-то :variable значение и :variable значение",
+            "many_keys": "какое-то :variable значение и :other_variable значение"
+        },
+        "variable2": {
+            "key": "какое-то {variable} значение",
+            "key_capital_first_letter": "какое-то {Variable} значение",
+            "key_capital_all_letters": "какое-то {VARIABLE} значение",
+            "key_twice": "какое-то {variable} значение и {variable} значение",
+            "many_keys": "какое-то {variable} значение и {other_variable} значение"
+        }
+    }
+}
