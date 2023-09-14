@@ -6,6 +6,9 @@ Require this package with composer:
 composer req  sushi-market/trans_helper
 ```
 
+## Basic Usage
+
+
 Пакет добавляет глобальную хелпер-функцию `___($key, $replace, $locale)`
 
 Данная функция работает аналогично `__()`, но вложенные значения будет искать внутри JSON файла, а не внутри директорий.
