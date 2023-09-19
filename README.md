@@ -1,7 +1,7 @@
 ## Установка
 
 ```bash
-composer req  sushi-market/trans_helper
+composer require sushi-market/trans_helper
 ```
 
 ## Использование
