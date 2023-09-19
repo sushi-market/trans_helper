@@ -1,13 +1,10 @@
-## Installation
-
-Require this package with composer:
+## Установка
 
 ```bash
 composer req  sushi-market/trans_helper
 ```
 
-## Basic Usage
-
+## Использование
 
 Пакет добавляет глобальную хелпер-функцию `___($key, $replace, $locale)`
 
